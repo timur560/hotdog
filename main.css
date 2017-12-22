@@ -11,14 +11,6 @@ body {
     background-color: #fbfafa;
 }
 
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
-}
-
 .clear {
     clear: both;
 }
@@ -30,8 +22,6 @@ div.container {
 div.header {
     background-image: url(img/header-image.png);
     background-position: center;
-    height: 499px;
-    width: 100%;
 }
 
 div.insta {
@@ -44,6 +34,29 @@ div.insta {
     box-shadow: inset 31px 93px 268px 0px rgba(0,0,0,0.75);
     padding: 10px 20px;
     font-weight: 600;
+}
+
+@media screen and (min-width: 800px) {
+    div.header {
+        height: 499px;
+        width: 100%;
+    }
+
+    div.insta {
+        height: 499px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    div.header {
+        height: 249px;
+        width: 100%;
+        background-size: 720px;
+    }
+    
+    div.insta {
+        height: 249px;
+    }
 }
 
 div.insta a {
@@ -66,16 +79,47 @@ div.menu-bar {
     background-color: #fff;
 }
 
-div.menu-items {
-    margin: 0 auto;
-    max-width: 800px;
+@media screen and (min-width: 800px) {
+    div.menu-items {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    
+    div.menu-items > div { 
+        font-size: 20pt;
+        text-align: center;
+        float: left;
+        padding: 34px 40px;
+    }
 }
 
-div.menu-items > div { 
-    font-size: 20pt;
-    text-align: center;
-    float: left;
-    padding: 34px 40px;
+@media screen and (min-width: 540px) and (max-width: 800px) {
+    div.menu-items {
+        margin: 0 auto;
+        max-width: 515px;
+    }
+    
+    div.menu-items > div { 
+        font-size: 16pt;
+        text-align: center;
+        float: left;
+        padding: 34px 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    div.menu-items {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    div.menu-items > div { 
+        font-size: 16pt;
+        text-align: center;
+        padding: 20px 40px;
+        width: 100%;
+    }
+    
 }
 
 div.menu-bar a {
@@ -92,11 +136,22 @@ div.content {
     text-align: center;
 }
 
-div.title {
-    padding-top: 40px;
-    font-size: 56pt;
-    color: rgba(85, 85, 89, 255);
-    text-align: center;
+@media screen and (min-width: 800px) {
+    div.title {
+        padding-top: 40px;
+        font-size: 56pt;
+        color: rgba(85, 85, 89, 255);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    div.title {
+        padding-top: 40px;
+        font-size: 32pt;
+        color: rgba(85, 85, 89, 255);
+        text-align: center;
+    }
 }
 
 div.title > div {
@@ -119,41 +174,29 @@ a.button {
     font-weight: 500;
 }
 
-div.content-items {
-    margin-top: 173px;
-    width: 100%;
-    height: 100%;
+div.content-items * {
     background-color: #fff;
 }
 
-div.content-items * {
+div.content-items {
+    width: 100%;
+    height: 100%;
     background-color: #fff;
 }
 
 div.content-item {
     margin: auto;
     max-width: 1440px;
-    height: 576px;
-}
-
-div.content-item div.description {
-    padding: 160px 86px;
-}
-
-div.content-item > div {
-    width: 50%;
-    height: 100%;
+    color: rgba(85, 85, 89, 255);
 }
 
 div.description {
     float: left;
     overflow: hidden;
+    text-align: left;
 }
 
 div.description h2 {
-    font-size: 24pt;
-    color: rgba(85, 85, 89, 255);
-    text-align: left;
     font-weight: 600;
     background-image: url(img/bullet.png);
     background-repeat: no-repeat;
@@ -162,16 +205,10 @@ div.description h2 {
     margin-left: -50px;
 }
 
-div.description p {
-    font-size: 18pt;
-    color: rgba(85, 85, 89, 255);
-    text-align: left;
-}
-
 div.photo {
     background-position: center;
     background-repeat: no-repeat;
-    max-width: 720px;
+    max-width: 800px;
 }
 
 div.item-1 {
@@ -186,15 +223,98 @@ div.item-3 {
     background-image: url(img/item-3.png);
 }
 
+
+@media screen and (min-width: 800px) {
+    div.content-items {
+        margin-top: 170px;
+    }
+
+    div.content-item {
+        height: 576px;
+    }
+
+    div.content-item > div {
+        width: 50%;
+        height: 100%;
+    }
+
+    div.description {
+        padding: 160px 86px;
+    }
+
+    div.description h2 {
+        font-size: 22pt;
+    }
+
+    div.description p {
+        font-size: 16pt;
+    }
+
+    div.item-1, div.item-3 {
+        float: right;
+    }
+
+    div.item-2 {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    div.content-items {
+        margin-top: 20px;
+    }
+
+    div.content-item {
+        height: 800px;
+    }
+
+    div.content-item > div {
+        width: 100%;
+        height: 50%;
+    }
+    
+    div.description {
+        padding: 100px 86px;
+    }
+
+    div.description h2 {
+        font-size: 18pt;
+    }
+
+    div.description p {
+        font-size: 14pt;
+    }
+}
+
 div.footer {
     width: 100%;
     min-height: 76px;
     height: 100%;
     background-color: #efefef;
     clear: both;
-    font-size: 14pt;
+    font-size: 12pt;
     color: rgba(85, 85, 89, 255);
     text-align: left;    
+}
+
+@media screen and (min-width: 900px) {
+    .copyright {
+        float: left;
+    }
+
+    .contacts {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .copyright {
+        text-align: center;
+    }
+
+    .contacts {
+        text-align: center;
+    }
 }
 
 div.footer > div {
