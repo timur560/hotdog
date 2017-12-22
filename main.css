@@ -161,15 +161,15 @@ div.title > div {
 
 a.button {
     display: inline-block;
-    font-size: 20pt;
+    font-size: 16pt;
     color: rgba(255, 255, 255, 255);
     text-align: center;
     text-decoration: none;
-    width: 310px;
-    height: 65px;
+    padding: 19px 20px;
+    width: auto;
+    min-height: 65px;
     background-color: #286782;
     border-radius: 6px;
-    line-height: 64px;
     margin-top: 80px;
     font-weight: 500;
 }
@@ -259,7 +259,7 @@ div.item-3 {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 400px) and (max-width: 800px) {
     div.content-items {
         margin-top: 20px;
     }
@@ -284,6 +284,38 @@ div.item-3 {
     div.description p {
         font-size: 14pt;
     }
+}
+
+@media screen and (max-width: 400px) {
+    div.content-items {
+        margin-top: 20px;
+    }
+
+    div.content-item {
+        height: 800px;
+    }
+
+    div.content-item > div {
+        width: 100%;
+        height: 50%;
+    }
+    
+    div.description {
+        padding: 32px 65px;
+    }
+
+    div.description h2 {
+        font-size: 16pt;
+    }
+
+    div.description p {
+        font-size: 12pt;
+    }
+    
+    a.button {
+        font-size: 12pt;
+    }
+
 }
 
 div.footer {
